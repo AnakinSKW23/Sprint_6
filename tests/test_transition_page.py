@@ -16,7 +16,7 @@ class TestTransition():
         self.button.wait_time(TransitionPageLocators.button_find_in_dzen)
         assert self.button.get_text_from_element(TransitionPageLocators.button_find_in_dzen) == UrlElements.dzen_page_text
 
-    @allure.title('Тестируем переход на страницу "Дзен" при клике на логотип "Самокат"')
+    @allure.title('Тестируем переход на страницу "Яндекс Самокат" при клике на логотип "Самокат"')
     def test_scooter_logo(self, driver):
         self.button = TransitionPage(driver)
         self.button.click_button(TransitionPageLocators.upper_order_button)
