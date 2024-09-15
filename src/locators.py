@@ -50,4 +50,3 @@ class TransitionPageLocators():
     upper_order_button = (By.XPATH, ".//div[2]/button[1]")
     scooter_logo = (By.XPATH, ".//img[@alt='Scooter']")
     yandex_logo = (By.XPATH, ".//img[@alt='Yandex']")
-

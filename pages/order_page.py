@@ -94,8 +94,6 @@ class OrderPage():
         self.set_confirm_order(locator_1)
         self.accept_order(locator_2)
 
-
-
     @allure.step('Заполняем все данные пользователя №2')
     def add_user_info_2(self):
         self.set_name_field(OrderPageLocators.name_field, UserInfo_2.name)
