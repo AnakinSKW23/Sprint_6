@@ -1,7 +1,14 @@
 import pytest
+<<<<<<< HEAD
 from pages.about_important_page import AboutImportantPage
 from src.data import Answers
 from src.locators import StartPageLocators
+=======
+from pages.about_important_page import StartLendingPage
+from src.data import Answers
+from src.locators import StartPageLocators
+from conftest import driver
+>>>>>>> 1b9ee898ee275ba8504827e2f3c51379949d1305
 import allure
 @allure.suite('Тестируем раздел "Вопросы о важном"')
 class TestQuestionsAboutImportant():
@@ -21,10 +28,19 @@ class TestQuestionsAboutImportant():
         ]
     )
     def test_question_answer(self, driver, locator, question, answer):
+<<<<<<< HEAD
         self.about_important_page = AboutImportantPage(driver)
         self.about_important_page.scroll_down(StartPageLocators.moscow_ring_road)
         self.about_important_page.click_button(locator)
         self.answer = answer
         self.about_important_page.wait_time(question)
         assert self.about_important_page.get_button_text(question) == self.answer
+=======
+        self.button = StartLendingPage(driver)
+        self.button.scroll_down(StartPageLocators.moscow_ring_road)
+        self.button.click_button(locator)
+        self.answer = answer
+        self.button.wait_time(question)
+        assert self.button.get_button_text(question) == self.answer
+>>>>>>> 1b9ee898ee275ba8504827e2f3c51379949d1305
 

@@ -71,32 +71,50 @@ class OrderPage():
     def get_text_from_status_button(self, locator):
         return self.driver.find_element(*locator).text
 
-    @allure.step('Заполняем все данные пользователя №1 и оформляем заказ')
-    def add_full_user_info_1(self):
+    @allure.step('Заполняем все данные пользователя №1')
+    def add_user_info_1(self):
         self.set_name_field(OrderPageLocators.name_field, UserInfo_1.name)
         self.set_surname_field(OrderPageLocators.surname_field, UserInfo_1.surname)
         self.set_address_field(OrderPageLocators.address_field, UserInfo_1.address)
         self.set_metro(OrderPageLocators.metro, UserInfo_1.metro)
         self.set_phone(OrderPageLocators.phone, UserInfo_1.phone)
         self.click_button(OrderPageLocators.next_button)
+
+    @allure.step('Заполняем информацию об аренде пользователя №1')
+    def about_rent_user_1(self):
         self.set_when_to_bring_date(OrderPageLocators.when_to_bring, OrderPageLocators.rent_date)
         self.set_rent_time(OrderPageLocators.rent_time, OrderPageLocators.four_days_rent)
         self.set_color_scooter(OrderPageLocators.black_scooter)
         self.add_comment_to_courier(OrderPageLocators.comment_to_courier, UserInfo_1.comment)
-        self.set_confirm_order(OrderPageLocators.confirm_order)
-        self.accept_order(OrderPageLocators.accept_order)
 
-    @allure.step('Заполняем все данные пользователя №2 и оформляем заказ')
-    def add_full_user_info_2(self):
+    @allure.step('Создаем заказ с данными и информацией об аренде пользователя №1')
+    def confirm_order_user_1(self, locator_1, locator_2):
+        self.add_user_info_1()
+        self.about_rent_user_1()
+        self.set_confirm_order(locator_1)
+        self.accept_order(locator_2)
+
+
+
+    @allure.step('Заполняем все данные пользователя №2')
+    def add_user_info_2(self):
         self.set_name_field(OrderPageLocators.name_field, UserInfo_2.name)
         self.set_surname_field(OrderPageLocators.surname_field, UserInfo_2.surname)
         self.set_address_field(OrderPageLocators.address_field, UserInfo_2.address)
         self.set_metro(OrderPageLocators.metro, UserInfo_2.metro)
         self.set_phone(OrderPageLocators.phone, UserInfo_2.phone)
         self.click_button(OrderPageLocators.next_button)
+
+    @allure.step('Заполняем информацию об аренде пользователя №2')
+    def about_rent_user_2(self):
         self.set_when_to_bring_date(OrderPageLocators.when_to_bring, OrderPageLocators.rent_date_next)
         self.set_rent_time(OrderPageLocators.rent_time, OrderPageLocators.three_days_rent)
         self.set_color_scooter(OrderPageLocators.grey_scooter)
         self.add_comment_to_courier(OrderPageLocators.comment_to_courier, UserInfo_2.comment)
-        self.set_confirm_order(OrderPageLocators.confirm_order)
-        self.accept_order(OrderPageLocators.accept_order)
+
+    @allure.step('Создаем заказ с данными и информацией об аренде пользователя №2')
+    def confirm_order_user_2(self, locator_confirm, locator_accept):
+        self.add_user_info_2()
+        self.about_rent_user_2()
+        self.set_confirm_order(locator_confirm)
+        self.accept_order(locator_accept)

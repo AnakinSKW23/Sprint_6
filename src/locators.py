@@ -10,14 +10,14 @@ class StartPageLocators():
     charging_scooter = (By.ID, 'accordion__heading-5')
     cancel_order = (By.ID, 'accordion__heading-6')
     moscow_ring_road = (By.ID, 'accordion__heading-7')
-    how_much_cost_text = (By.XPATH, ".//p[text()='Сутки — 400 рублей. Оплата курьеру — наличными или картой.']")
-    want_several_scooters_text = (By.XPATH, ".//p[text()='Пока что у нас так: один заказ — один самокат. Если хотите покататься с друзьями, можете просто сделать несколько заказов — один за другим.']")
-    how_calculate_rent_time_text = (By.XPATH, ".//p[text()='Допустим, вы оформляете заказ на 8 мая. Мы привозим самокат 8 мая в течение дня. Отсчёт времени аренды начинается с момента, когда вы оплатите заказ курьеру. Если мы привезли самокат 8 мая в 20:30, суточная аренда закончится 9 мая в 20:30.']")
-    order_scooter_today_text = (By.XPATH, ".//p[text()='Только начиная с завтрашнего дня. Но скоро станем расторопнее.']")
-    extend_the_order_text = (By.XPATH, ".//p[text()='Пока что нет! Но если что-то срочное — всегда можно позвонить в поддержку по красивому номеру 1010.']")
-    charging_scooter_text = (By.XPATH, ".//p[text()='Самокат приезжает к вам с полной зарядкой. Этого хватает на восемь суток — даже если будете кататься без передышек и во сне. Зарядка не понадобится.']")
-    cancel_order_text = (By.XPATH, ".//p[text()='Да, пока самокат не привезли. Штрафа не будет, объяснительной записки тоже не попросим. Все же свои.']")
-    moscow_ring_road_text = (By.XPATH, ".//p[text()='Да, обязательно. Всем самокатов! И Москве, и Московской области.']")
+    how_much_cost_text = (By.XPATH, ".//div[@id='accordion__panel-0']")
+    want_several_scooters_text = (By.XPATH, ".//div[@id='accordion__panel-1']")
+    how_calculate_rent_time_text = (By.XPATH, ".//div[@id='accordion__panel-2']")
+    order_scooter_today_text = (By.XPATH, ".//div[@id='accordion__panel-3']")
+    extend_the_order_text = (By.XPATH, ".//div[@id='accordion__panel-4']")
+    charging_scooter_text = (By.XPATH, ".//div[@id='accordion__panel-5']")
+    cancel_order_text = (By.XPATH, ".//div[@id='accordion__panel-6']")
+    moscow_ring_road_text = (By.XPATH, ".//div[@id='accordion__panel-7']")
 
 
 class OrderPageLocators():
@@ -42,6 +42,7 @@ class OrderPageLocators():
     accept_order = (By.XPATH, ".//button[text()='Да']")
     status_button_text = (By.XPATH, ".//button[text()='Посмотреть статус']")
     accept_cookie = (By.XPATH, ".//button[text()='да все привыкли']")
+    metro_place = (By.XPATH, "//input[@class='select-search__input']")
 
 class TransitionPageLocators():
     button_find_in_dzen = (By.XPATH, ".//button[text()='Найти']")
@@ -49,3 +50,4 @@ class TransitionPageLocators():
     upper_order_button = (By.XPATH, ".//div[2]/button[1]")
     scooter_logo = (By.XPATH, ".//img[@alt='Scooter']")
     yandex_logo = (By.XPATH, ".//img[@alt='Yandex']")
+

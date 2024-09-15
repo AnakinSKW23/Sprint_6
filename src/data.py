@@ -17,7 +17,7 @@ class UserInfo_1():
     address = 'Красная 3'
     metro = 'Кропоткинская'
     phone = '+79999999999'
-    comment = 'Вези быстрее'
+    comment = 'Спасибо за ревью! Ошибки исправил! <3'
 
 class UserInfo_2():
     name = 'Николай'
