@@ -27,3 +27,4 @@ class TestQuestionsAboutImportant():
         self.answer = answer
         self.about_important_page.wait_time(question)
         assert self.about_important_page.get_button_text(question) == self.answer
+

@@ -23,4 +23,3 @@ class TransitionPage():
     @allure.step('Задаем ожидание')
     def wait_time(self, locators):
         return WebDriverWait(self.driver, 15).until(expected_conditions.visibility_of_element_located(locators))
-

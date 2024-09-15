@@ -20,4 +20,3 @@ class TestOrderPage():
         self.order_page.click_button(OrderPageLocators.down_order_button)
         self.order_page.confirm_order_user_2(OrderPageLocators.confirm_order, OrderPageLocators.accept_order)
         assert self.order_page.get_text_from_status_button(OrderPageLocators.status_button_text) == ButtonStatus.look_at_status
-

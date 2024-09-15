@@ -2,7 +2,6 @@ from pages.transition_page import TransitionPage
 from src.data import UrlElements
 from src.locators import TransitionPageLocators
 import allure
-
 @allure.suite('Тестируем переход на страницы по клику на логотип')
 class TestTransition():
 

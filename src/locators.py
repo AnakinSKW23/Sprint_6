@@ -19,7 +19,6 @@ class StartPageLocators():
     cancel_order_text = (By.XPATH, ".//div[@id='accordion__panel-6']")
     moscow_ring_road_text = (By.XPATH, ".//div[@id='accordion__panel-7']")
 
-
 class OrderPageLocators():
     upper_order_button = (By.XPATH, ".//div[2]/button[1]")
     down_order_button = (By.XPATH, ".//div[5]/button")
@@ -50,3 +49,4 @@ class TransitionPageLocators():
     upper_order_button = (By.XPATH, ".//div[2]/button[1]")
     scooter_logo = (By.XPATH, ".//img[@alt='Scooter']")
     yandex_logo = (By.XPATH, ".//img[@alt='Yandex']")
+

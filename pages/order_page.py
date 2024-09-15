@@ -2,7 +2,6 @@ from src.locators import OrderPageLocators
 from src.data import UserInfo_1, UserInfo_2
 from helpers import MetroLocators
 import allure
-
 class OrderPage():
 
     def __init__(self, driver):
